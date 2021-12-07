@@ -168,7 +168,7 @@ export class Atomizer {
   }
 
   setOutsideParticleSphere() {
-    const particleAmount = 2000
+    const particleAmount = 5000
     const geometry = new THREE.BufferGeometry()
     let positions = []
 

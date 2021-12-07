@@ -29,7 +29,7 @@ export class PostProcessing {
     this.bokehPass = new BokehPass(scene, camera.camera, {
       focus: 4.5,
       aperture: 0.025,
-      maxblur: 0.01,
+      maxblur: 0.003,
     })
     this.composer.addPass(this.bokehPass)
   }
@@ -54,8 +54,8 @@ export class PostProcessing {
 
   setPostProcessingAnimation() {
     gsap.from(this.unrealBloomPass, {
-      strength: 5,
-      duration: 5,
+      strength: 3,
+      duration: 4,
     })
   }
 }

@@ -9,10 +9,11 @@ import { Sizes } from "./Sizes"
 import { PostProcessing } from "./Postprocessing"
 
 const stats = new Stats()
-stats.showPanel(0)
+stats.showPanel(false)
 document.body.appendChild(stats.dom)
 
 export const pane = new Pane()
+pane.hidden = true
 
 export const canvas = document.querySelector("canvas.webgl")
 
@@ -52,9 +53,12 @@ const tick = () => {
   postProcessing.composer.render()
 
   //Lock to 60fps
-  setTimeout(() => {
-    window.requestAnimationFrame(tick)
-  }, 1000 / 60)
+  // setTimeout(() => {
+  //   window.requestAnimationFrame(tick)
+  // }, 1000 / 60)
+
+  //For Prod
+  window.requestAnimationFrame(tick)
 
   stats.end()
 }
