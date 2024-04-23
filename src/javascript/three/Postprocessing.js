@@ -26,12 +26,12 @@ export class PostProcessing {
     this.composer.addPass(this.unrealBloomPass)
     // this.unrealBloomPass.enabled = false
 
-    this.bokehPass = new BokehPass(scene, camera.camera, {
-      focus: 4.5,
-      aperture: 0.025,
-      maxblur: 0.003,
-    })
-    this.composer.addPass(this.bokehPass)
+    // this.bokehPass = new BokehPass(scene, camera.camera, {
+    //   focus: 4.5,
+    //   aperture: 0.025,
+    //   maxblur: 0.003,
+    // })
+    // this.composer.addPass(this.bokehPass)
   }
 
   setPostProcessingTweaks() {
@@ -44,12 +44,12 @@ export class PostProcessing {
     })
 
     //DOF Tweaks
-    pane.addInput(this.bokehPass.uniforms.maxblur, "value", {
-      label: "BokehPass Maxblur",
-      min: 0,
-      max: 0.02,
-      step: 0.0001,
-    })
+    // pane.addInput(this.bokehPass.uniforms.maxblur, "value", {
+    //   label: "BokehPass Maxblur",
+    //   min: 0,
+    //   max: 0.02,
+    //   step: 0.0001,
+    // })
   }
 
   setPostProcessingAnimation() {

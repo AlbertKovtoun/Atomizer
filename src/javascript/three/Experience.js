@@ -41,9 +41,9 @@ const tick = () => {
   atomizer.middleSphereMaterial.uniforms.uTime.value = elapsedTime
   atomizer.outsideSphereMaterial.uniforms.uTime.value = elapsedTime
 
-  atomizer.insidePoints.rotation.y = elapsedTime * 0.2
-  atomizer.middlePoints.rotation.y = elapsedTime * 0.2
-  atomizer.dome.rotation.y = elapsedTime * 0.2
+  atomizer.insidePoints.rotation.y = elapsedTime * 0.5
+  atomizer.middlePoints.rotation.y = elapsedTime * 0.5
+  atomizer.dome.rotation.y = elapsedTime * 0.5
 
   // Update controls
   camera.controls.update()
